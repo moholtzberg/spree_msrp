@@ -5,9 +5,9 @@ Deface::Override.new(
   text:
 <<HTMLBLOB
     <div data-hook="admin_product_form_msrp">
-      <%= f.field_container :msrp do %>
+      <%= f.field_container :msrp, :class => "form-group" do %>
         <%= f.label :msrp, raw(Spree.t(:msrp)) %>
-        <%= f.text_field :msrp, :value => number_to_currency(@product.msrp, :unit => '') %>
+        <%= f.text_field :msrp, :class => "form-control", :value => number_to_currency(@product.msrp, :unit => '') %>
         <%= f.error_message_on :msrp %>
       <% end %>
     </div>
