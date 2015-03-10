@@ -4,9 +4,9 @@ Deface::Override.new(
   insert_after: 'div[data-hook="price"]',
   text:
 <<HTMLBLOB
-    <div class="field" data-hook="msrp">
+    <div class="form-group" data-hook="msrp">
       <%= f.label :msrp, Spree.t(:msrp) %>
-      <%= f.text_field :msrp, :value => number_to_currency(@variant.msrp, :unit => ''), :class => 'fullwidth' %>
+      <%= f.text_field :msrp, :value => number_to_currency(@variant.msrp, :unit => ''), :class => 'form-control' %>
     </div>
 HTMLBLOB
 )
